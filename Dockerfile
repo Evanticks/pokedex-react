@@ -1,10 +1,9 @@
 FROM node:16-alpine
 WORKDIR /app
 
+RUN chmod 775 /app
 # Copio package.json y package-lock.json al directorio /app
-USER 0
 COPY package.json  ./
-RUN chown -R 1001:0 /app
 # Instalo las dependencias
 RUN npm install
 
