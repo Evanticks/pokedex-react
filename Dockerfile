@@ -1,4 +1,6 @@
 FROM node:16-alpine
+USER 1001
+RUN mkdir -p /app
 WORKDIR /app
 
 RUN chmod 775 /app
