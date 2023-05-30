@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
 USER 1001
-mkdir /app
+RUN mkdir /app
 WORKDIR /app
 
 # Copio package.json y package-lock.json al directorio /app
