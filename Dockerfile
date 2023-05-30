@@ -7,10 +7,11 @@ WORKDIR /app
 # Copio package.json y package-lock.json al directorio /app
 COPY package.json  ./
 # Instalo las dependencias
-RUN npm config set unsafe-perm true && npm install && npm config set unsafe-perm false
+RUN npm install
 
 # Copio el resto de ficheros del proyecto a la imagen
-COPY .
+COPY . .
+
 
 EXPOSE 5173
 # Inicio la aplicacion. uso dev ya que es el que esta indicado en package.json,
